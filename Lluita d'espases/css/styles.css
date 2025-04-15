@@ -1,0 +1,282 @@
+body{
+
+    margin: 0;
+    overflow: hidden;
+}
+
+.background{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+    background-image: url(../sprites/Eram\ fons.gif);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+   z-index: -1;
+   
+}
+
+h1{
+    
+    color: green;
+    
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #2b2b2b;
+  font-family: 'Jersey 10', sans-serif;
+
+
+
+  gap: 60px;
+  height: 100vh;
+  color: #fff;
+  image-rendering: pixelated 8-bi; }
+
+.team {
+  text-align: center;
+}
+
+.eram-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px #000;
+  margin-left: 5%;
+}
+
+.character{
+    align-items: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.life-bar-container {
+  position: relative;
+  width: 70%;
+  height: 30px;
+  background: #333;
+  border-radius: 10px;
+
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  margin-left: 5%;
+
+  
+}
+
+.life-bar {
+  height: 100%;
+  width: 100%;
+  background: #00ff00;   transition: width 0.5s ease, background 0.5s ease, box-shadow 0.5s ease;
+  border-radius: 10px 0 0 10px;
+}
+
+.life-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: regular;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
+
+.tap-hint {
+  font-size: 1rem;
+  margin-top: 20px;
+  color: #888;
+  opacity: 0.8;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+
+
+.character-sprite {
+  width: 200px;
+  padding: 200px;
+  height: 300px;
+  width: auto;
+  image-rendering: pixelated;
+  transition: all 0.2s ease;
+}
+
+.character-sprite2 {
+  width: 200px;
+
+  padding: 200px;
+  height: 290px;
+  width: 230px;
+  image-rendering: pixelated;
+  transition: all 0.2s ease;
+}
+
+.shake {
+  animation: shake-animation 0.5s ease-in-out;
+}
+
+@keyframes shake-animation {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(10px); }
+}
+
+
+
+
+
+
+
+
+
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  margin-top: -300px;    overflow: hidden;
+  background-image: url('/sprites/ezgif.com-animated-gif-maker\ \(1\).gif');    background-size: contain;    background-repeat: no-repeat;    background-position: top left;    animation: moveBackground 23s linear infinite;  }
+
+.game-elements {
+  position: relative;    z-index: 2;  }
+
+@keyframes moveBackground {
+  0% {
+    background-position: top left;
+  }
+  25% {
+    background-position: top 0px left 300px;
+  }
+  50% {
+    background-position: top 100px left 500px;
+  }
+  75% {
+    background-position: top 0px left 600px;
+  }
+  100% {
+    background-position: top 300px left 600px;
+  }
+}
+
+
+
+
+.Defeat_Animation2 img{
+  height: 100px;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);   display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; }
+
+.ko-text {
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+  letter-spacing: 10px;
+  text-align: center;
+  transform: scale(1.5);
+  animation: pulse-ko 1s infinite;
+}
+
+@keyframes pulse-ko {
+  0%, 100% { opacity: 0.9; transform: scale(1.5); }
+  50% { opacity: 1; transform: scale(1.6); }
+}
+
+.ko-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 5rem;
+  color: red;
+  text-shadow: 2px 2px 4px black;
+  opacity: 0;
+  z-index: 1000;
+  pointer-events: none;
+  text-align: center;
+}
+
+#ko-text p {
+  margin: 0;
+}
+
+#winner {
+  font-size: 3rem;
+  color: yellow;
+  text-shadow: 2px 2px 4px black;
+}
+
+
+
+
+#play-again-btn {
+  text-decoration: none;   color: #ffcc00;   font-size: 2rem;
+  font-family: 'Jersey 10', sans-serif;
+  background-color: #333;   padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#play-again-btn:hover {
+  background-color: #555; }
+
+
+#ko-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);   text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);   padding: 20px;
+  border-radius: 10px;
+  color: white;
+  display: none; }
+
+#ko-text button {
+  background-color: #4CAF50;   color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#ko-text button:hover {
+  background-color: #45a049;
+}
